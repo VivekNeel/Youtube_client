@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vivek.client.youtube.com.youtubeclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name=".YoutubeApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/CustomTheme"
+        tools:replace="android:icon">
+        <activity android:name=".MainActivity"
+            android:label="Let's Go Shiva">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.VideoListActivity"
+            />
+        <activity android:name=".activities.VideoViewActivity"/>
+        <activity android:name=".activities.AboutDeveloperActivity"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="131afc67f163658ef39eb9486750238c3b860606" />
+    </application>
+
+</manifest>
