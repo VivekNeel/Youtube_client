@@ -1,0 +1,21 @@
+#
+# Build configuration for Circle CI
+#
+
+general:
+    artifacts:
+        - /home/ubuntu/VivekNeel/app/build/outputs/apk/
+
+machine:
+    environment:
+        ANDROID_HOME: /Users/vivek/Library/Android/sdk
+
+dependencies:
+    override:
+        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-24.0.3,android-24,extra-google-m2repository,extra-google-google_play_services,extra-android-support
+        - ANDROID_HOME=/Users/vivek/Library/Android/sdk ./gradlew dependencies
+
+test:
+    override:
+        - (./gradlew assemble):
+            timeout: 360
