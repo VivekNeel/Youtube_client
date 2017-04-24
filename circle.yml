@@ -6,8 +6,6 @@ general:
     artifacts:
         - /home/ubuntu/VivekNeel/app/build/outputs/apk/
 
-
- general:
     branches:
           only:
            - master # list of branches to build
