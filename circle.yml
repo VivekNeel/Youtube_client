@@ -8,8 +8,8 @@ general:
 
     branches:
           only:
-           - master # list of branches to build
-           - /feature-.*/ # or regexes
+           - master 
+
 
 machine:
     environment:
