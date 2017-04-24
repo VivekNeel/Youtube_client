@@ -16,6 +16,8 @@ public class YoutubeApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // Initialize fabric
         Fabric.with(this, new Crashlytics());
         AndroidNetworking.initialize(getApplicationContext());
         AndroidNetworking.setParserFactory(new JacksonParserFactory());
