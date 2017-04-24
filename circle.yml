@@ -7,7 +7,7 @@ general:
         - /home/ubuntu/VivekNeel/app/build/outputs/apk/
     branches :
       only:
-      -master
+      master
 
 machine:
     environment:
