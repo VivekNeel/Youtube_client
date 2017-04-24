@@ -5,6 +5,9 @@
 general:
     artifacts:
         - /home/ubuntu/VivekNeel/app/build/outputs/apk/
+    branches :
+      only:
+      -master
 
 machine:
     environment:
@@ -20,4 +23,3 @@ test:
         - (./gradlew assembleDebug):
             timeout: 360
 
-            
