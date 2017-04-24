@@ -5,9 +5,13 @@
 general:
     artifacts:
         - /home/ubuntu/VivekNeel/app/build/outputs/apk/
-    branches :
-      only:
-      master
+
+
+ general:
+    branches:
+          only:
+           - master # list of branches to build
+           - /feature-.*/ # or regexes
 
 machine:
     environment:
