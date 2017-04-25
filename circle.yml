@@ -15,6 +15,11 @@ machine:
     environment:
         ANDROID_HOME: /usr/local/android-sdk-linux
 
+before_install:
+          - mkdir "$ANDROID_HOME/licenses" || true
+          - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
+          - echo -e "\nd975f751698a77b662f1254ddbeed3901e976f5a" > "$ANDROID_HOME/licenses/intel-android-extra-license"
+
 dependencies:
     override:
         - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-24.0.3,android-24,extra-google-m2repository,extra-google-google_play_services,extra-android-support
